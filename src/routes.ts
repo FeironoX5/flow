@@ -30,6 +30,7 @@ export const routes: Routes = [
           { path: '', outlet: 'header', component: DataDisplayHeaderComponent },
         ],
       },
+      { path: '**', redirectTo: '/flow', pathMatch: 'full' },
     ],
   },
 ];
