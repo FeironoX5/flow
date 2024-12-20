@@ -1,0 +1,21 @@
+@use "shared" as shared;
+
+.page-container {
+  @extend .flex-container;
+  flex-direction: row;
+  width: 100%;
+}
+.page-sidebar {
+  order: 0;
+}
+
+@media (width <= shared.$mobile-breakpoint) {
+  .page-container {
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+  }
+  .page-sidebar {
+    order: 1;
+  }
+}

@@ -1,0 +1,12 @@
+@use "shared" as shared;
+
+:host {
+  @extend .full;
+  display: block;
+  width: 100%;
+  flex: 1 0 auto;
+  border-radius: shared.$sm-border-radius;
+  background: shared.$background-l1-color;
+  border: shared.$border;
+  overflow: hidden;
+}

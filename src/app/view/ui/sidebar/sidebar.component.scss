@@ -1,0 +1,69 @@
+@use "shared" as shared;
+
+:host {
+  width: 75px;
+}
+
+.logo {
+  opacity: 0.3;
+  width: 23px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: all shared.$transition;
+}
+
+.logo.active {
+  opacity: 1;
+}
+
+.sidebar-icon-button {
+  @extend .center-container;
+  width: 50px;
+  height: 50px;
+  border-radius: shared.$sm-border-radius;
+  background: none;
+  color: shared.$disabled-text-color;
+  transition: all shared.$transition;
+}
+
+.sidebar-icon-button.active {
+  color: shared.$text-color;
+}
+
+.sidebar-icon-button.primary {
+  height: 65px;
+  border-radius: shared.$bg-border-radius;
+  color: shared.$background-l1-color;
+  background: shared.$accent-color;
+  margin: 5px 0;
+}
+
+.sidebar-icon-button:hover {
+  background: shared.$background-l2-color;
+}
+
+.sidebar-icon-button.primary:hover {
+  transform: scale(1.05);
+  background: shared.$accent-color;
+}
+
+.sidebar-container {
+  @extend .flex-container;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  padding: 10px 0;
+  gap: 5px;
+}
+
+@media (width <= shared.$mobile-breakpoint) {
+  :host {
+    width: 100%;
+  }
+  .sidebar-container {
+    flex-direction: row;
+    width: 100%;
+    padding: 0 15px;
+  }
+}

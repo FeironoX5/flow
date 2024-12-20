@@ -1,0 +1,30 @@
+@use "shared" as shared;
+
+.stats {
+  height: 70px;
+  background: shared.$border-color;
+  position: relative;
+}
+
+.date {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: shared.$accent-font-family;
+}
+
+.timer-overlay {
+  @extend .full, .center-container;
+  position: absolute;
+  background: radial-gradient(
+    circle,
+    shared.hex-to-rgba(shared.$background-l0-color, 1) 0%,
+    shared.hex-to-rgba(shared.$background-l0-color, 0) 50%
+  );
+}
+
+.timer-text {
+  font-family: shared.$accent-font-family;
+  font-size: shared.$bb-text-size;
+}

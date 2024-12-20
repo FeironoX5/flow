@@ -1,0 +1,34 @@
+@use "shared" as shared;
+
+:host {
+  @extend .fill, .full;
+  display: grid;
+  gap: 6px;
+  grid-template-rows: auto 1fr;
+}
+
+.header-section {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  view-transition-name: header;
+}
+
+.content-section {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  view-transition-name: content;
+  height: auto;
+}
+
+.side-section {
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+  view-transition-name: side;
+}
+
+@media (width <= shared.$mobile-breakpoint) {
+  .side-section {
+    grid-row: 3 / 4;
+    grid-column: 1/3;
+  }
+}

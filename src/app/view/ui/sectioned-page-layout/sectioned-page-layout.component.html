@@ -1,0 +1,15 @@
+<app-section class="header-section">
+  <router-outlet name="header"></router-outlet>
+</app-section>
+<app-section
+  class="content-section"
+  [ngStyle]="{ aspectRatio: computedStyles.aspectRatioContent }"
+>
+  <router-outlet></router-outlet>
+</app-section>
+<app-section
+  class="side-section"
+  [ngStyle]="{ display: computedStyles.displaySideSection }"
+>
+  <router-outlet #sideOutlet="outlet" name="side"></router-outlet>
+</app-section>
