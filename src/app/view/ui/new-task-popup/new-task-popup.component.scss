@@ -1,0 +1,55 @@
+@use "shared" as shared;
+
+.task-title {
+  @extend .fill;
+  font-size: 18px;
+  color: #ddd;
+  background: none;
+  outline: none;
+  padding: 4px 10px;
+  padding-left: 20px;
+}
+
+.task-actions {
+  padding: 10px;
+  display: flex;
+  gap: 5px;
+}
+
+.task-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: shared.$background-l2-color;
+  border: shared.$border;
+  border-radius: shared.$sm-border-radius;
+  color: shared.$subtext-color;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.task-button.today {
+  background-color: #2e402d;
+  color: #5cde73;
+  border-color: #5cde73;
+}
+
+.task-button:hover {
+  background-color: shared.$background-l3-color;
+}
+
+.task-button.today:hover {
+  background-color: shared.$border-color;
+}
+
+.task-button.flag:hover {
+  color: #ff7373;
+}
+
+.task-button.menu:hover {
+  color: #fff;
+}
+
+.icon {
+  font-size: 16px;
+}

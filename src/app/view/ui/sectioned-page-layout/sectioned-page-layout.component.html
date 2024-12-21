@@ -7,6 +7,9 @@
 >
   <router-outlet></router-outlet>
 </app-section>
+@if (state.isNewTaskPopupOpen()) {
+<app-new-task-popup class="new-task-popup"></app-new-task-popup>
+}
 <app-section
   class="side-section"
   [ngStyle]="{ display: computedStyles.displaySideSection }"

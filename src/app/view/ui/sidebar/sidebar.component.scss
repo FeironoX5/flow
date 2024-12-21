@@ -48,6 +48,18 @@
   background: shared.$accent-color;
 }
 
+.sidebar-icon-button.primary.active {
+  transform: scale(1.05);
+}
+
+.sidebar-icon-button.primary.active:hover {
+  transform: scale(1);
+}
+
+.sidebar-icon-button.primary.active * {
+  transform: rotate(45deg);
+}
+
 .sidebar-container {
   @extend .flex-container;
   flex-direction: column;

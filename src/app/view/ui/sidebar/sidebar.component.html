@@ -6,7 +6,11 @@
       class="logo"
       routerLinkActive="active"
     />
-    <button class="sidebar-icon-button primary">
+    <button
+      class="sidebar-icon-button primary"
+      [ngClass]="{ active: state.isNewTaskPopupOpen() }"
+      (click)="toggleNewTaskPopup()"
+    >
       <app-icon>add</app-icon>
     </button>
     <button

@@ -8,5 +8,6 @@
 </p>
 </div>
 
+Found bugs:
 - [ ] animation lagging in Firefox https://stackoverflow.com/questions/62578638/why-is-this-svg-mask-animation-choppy-in-firefox-but-smooth-in-chrome
 - [ ] aspect-ratio doesn't work in Firefox

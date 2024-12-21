@@ -26,6 +26,11 @@
   view-transition-name: side;
 }
 
+.new-task-popup {
+    grid-column: 1 / -1;
+    grid-row: 3 / 4;
+}
+
 @media (width <= shared.$mobile-breakpoint) {
   .side-section {
     grid-row: 3 / 4;

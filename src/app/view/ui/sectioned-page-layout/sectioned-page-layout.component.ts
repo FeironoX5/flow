@@ -11,19 +11,25 @@ import {
 import { SectionComponent } from '../section/section.component';
 import { NgStyle } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+import { NewTaskPopupComponent } from '../new-task-popup/new-task-popup.component';
+import { AppStateService } from '../../../services/app-state.service';
 
 @Component({
   selector: 'app-sectioned-page-layout',
   templateUrl: './sectioned-page-layout.component.html',
   styleUrls: ['./sectioned-page-layout.component.scss'],
-  imports: [SectionComponent, NgStyle, RouterOutlet],
+  imports: [SectionComponent, NgStyle, RouterOutlet, NewTaskPopupComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SectionedPageLayoutComponent {
   @ViewChild('sideOutlet', { static: true }) sideOutlet!: RouterOutlet;
   private isActivated = false;
 
-  constructor(private cdr: ChangeDetectorRef, private host: ElementRef) {}
+  constructor(
+    private cdr: ChangeDetectorRef,
+    private host: ElementRef,
+    protected state: AppStateService
+  ) {}
 
   ngAfterViewInit(): void {
     this.updateStyles();
